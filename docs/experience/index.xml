@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Experiences on Asa Zukhal — Web Developer &amp; UI/UX Designer</title>
-		<link>https://asazukhal.me/experience/</link>
+		<link>http://localhost:1313/experience/</link>
 		<description>Recent content in Experiences on Asa Zukhal — Web Developer &amp; UI/UX Designer</description>
 		<generator>Hugo</generator>
 		<language>id</language>
@@ -10,40 +10,40 @@
 		
 		
 		
-			<atom:link href="https://asazukhal.me/experience/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Kelas Bahasa</title>
-				<link>https://asazukhal.me/experience/kelas-bahasa/</link>
+				<link>http://localhost:1313/experience/kelas-bahasa/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/experience/kelas-bahasa/</guid>
+				<guid>http://localhost:1313/experience/kelas-bahasa/</guid>
 				<description>&lt;p&gt;Increased organic traffic by over 400% within 6 months through a structured SEO strategy and keyword clustering. Conducted technical audits to improve page loading speed by up to 5 seconds faster (JS defer, lazy-load, LCP optimization). Planned and optimized 50+ SEO-friendly articles with above-average CTR in the education niche. Managed backlink building and domain authority growth from 80 to 229 referring domains, totaling over 12.1K backlinks. Generated an average of 50 qualified leads per month from organic traffic through content optimization, effective CTAs, and Chatbase chatbot integration.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Digibos Creative Studio</title>
-				<link>https://asazukhal.me/experience/digibos/</link>
+				<link>http://localhost:1313/experience/digibos/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/experience/digibos/</guid>
+				<guid>http://localhost:1313/experience/digibos/</guid>
 				<description>&lt;p&gt;Wrote SEO-optimized articles on digital marketing and business topics. Researched keywords and structured content with proper SEO elements. Collaborated with marketing teams to align content with brand goals.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Titik Nol English Course</title>
-				<link>https://asazukhal.me/experience/titik-nol/</link>
+				<link>http://localhost:1313/experience/titik-nol/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/experience/titik-nol/</guid>
+				<guid>http://localhost:1313/experience/titik-nol/</guid>
 				<description>&lt;p&gt;Wrote SEO-optimized articles on digital marketing and business topics. Researched keywords and structured content with proper SEO elements. Collaborated with marketing teams to align content with brand goals.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Skilvul</title>
-				<link>https://asazukhal.me/experience/skilvul/</link>
+				<link>http://localhost:1313/experience/skilvul/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/experience/skilvul/</guid>
+				<guid>http://localhost:1313/experience/skilvul/</guid>
 				<description>&lt;p&gt;Wrote SEO-optimized articles on digital marketing and business topics. Researched keywords and structured content with proper SEO elements. Collaborated with marketing teams to align content with brand goals.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Sanggar Corp</title>
-				<link>https://asazukhal.me/experience/sanggar-corp/</link>
+				<link>http://localhost:1313/experience/sanggar-corp/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/experience/sanggar-corp/</guid>
+				<guid>http://localhost:1313/experience/sanggar-corp/</guid>
 				<description>&lt;p&gt;Wrote SEO-optimized articles on digital marketing and business topics. Researched keywords and structured content with proper SEO elements. Collaborated with marketing teams to align content with brand goals.&lt;/p&gt;</description>
 			</item>
 	</channel>

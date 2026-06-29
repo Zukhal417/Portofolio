@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Educations on Asa Zukhal — Web Developer &amp; UI/UX Designer</title>
-		<link>https://asazukhal.me/education/</link>
+		<link>http://localhost:1313/education/</link>
 		<description>Recent content in Educations on Asa Zukhal — Web Developer &amp; UI/UX Designer</description>
 		<generator>Hugo</generator>
 		<language>id</language>
@@ -10,12 +10,12 @@
 		
 		
 		
-			<atom:link href="https://asazukhal.me/education/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/education/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Bachelor of Engineering</title>
-				<link>https://asazukhal.me/education/bachelor/</link>
+				<link>http://localhost:1313/education/bachelor/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/education/bachelor/</guid>
+				<guid>http://localhost:1313/education/bachelor/</guid>
 				<description>&lt;p&gt;University of Muhammadiyah Malang&#xA;GPA: 3.75 / 4.00&lt;/p&gt;</description>
 			</item>
 	</channel>

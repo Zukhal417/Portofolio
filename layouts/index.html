@@ -2,36 +2,44 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ .Site.Title }}</title>
-  <meta name="description" content="Personal portfolio by {{ .Site.Params.name }}. Web Developer &amp; UI/UX Designer with expertise in HTML, CSS, PHP, and SEO optimization." />
+  <meta name="description" content="{{ .Site.Params.description }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
   <!-- HEADER -->
-  <div class="header">
-    <div class="header-logo">
+  <header class="header">
+    <div class="header-logo" aria-label="Menu">
       <span></span><span></span><span></span>
     </div>
-    <div class="header-search">
+    <div class="header-search" aria-label="Search">
       <svg viewBox="0 0 24 24" fill="none">
         <circle cx="11" cy="11" r="7.5" stroke="#8B8B8B" stroke-width="2.4"/>
         <path d="M16.5 16.5L21 21" stroke="#000" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
     </div>
-  </div>
+  </header>
 
   <!-- PROFILE -->
   <div class="profile">
     <div class="profile-banner-wrap">
+      {{ if .Site.Params.banner }}
+      <div class="profile-banner" style="background-image:url('{{ .Site.Params.banner }}');background-size:cover;background-position:center;opacity:1;"></div>
+      {{ else }}
       <div class="profile-banner"></div>
+      {{ end }}
+      {{ if .Site.Params.avatar }}
+      <div class="profile-avatar" style="background-image:url('{{ .Site.Params.avatar }}');background-size:cover;background-position:center;"></div>
+      {{ else }}
       <div class="profile-avatar"></div>
+      {{ end }}
       <div class="profile-action">
-        <div class="profile-msg-icon">
+        <div class="profile-msg-icon" aria-label="Pesan">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#33363F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
@@ -42,52 +50,63 @@
       </div>
     </div>
     <div class="profile-info">
-      <div class="profile-name">{{ .Site.Params.name }}</div>
-      <div class="profile-handle">{{ .Site.Params.handle }}</div>
+      <h1 class="profile-name">{{ .Site.Params.name }}</h1>
+      <p class="profile-handle">{{ .Site.Params.handle }}</p>
       <div class="profile-links">
-        <div class="profile-link-row">
+        <a href="https://instagram.com/{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="profile-link-row">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#101828" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
             <circle cx="17.5" cy="6.5" r="0.8" fill="#101828" stroke="none"/>
           </svg>
           <span class="social-label">{{ .Site.Params.instagram }}</span>
-        </div>
-        <div class="profile-link-row">
+        </a>
+        <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" rel="noopener noreferrer" class="profile-link-row">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#101828" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="4"/>
             <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>
           </svg>
           <span class="social-label">{{ .Site.Params.linkedin }}</span>
-        </div>
+        </a>
       </div>
     </div>
   </div>
 
   <!-- TABS -->
-  <div class="tabs">
-    <button class="tab active" onclick="setTab(this)">All</button>
-    <button class="tab" onclick="setTab(this)">Articles</button>
-    <button class="tab" onclick="setTab(this)">Work</button>
-    <button class="tab" onclick="setTab(this)">About</button>
-  </div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="all" onclick="setTab(this)">All</button>
+    <button class="tab" data-tab="articles" onclick="setTab(this)">Articles</button>
+    <button class="tab" data-tab="work" onclick="setTab(this)">Work</button>
+    <button class="tab" data-tab="about" onclick="setTab(this)">About</button>
+  </nav>
+
+  {{ $services := where .Site.RegularPages "Section" "services" }}
+  {{ $hero    := index (where $services ".Params.layout" "hero") 0 }}
+  {{ $problem := index (where $services ".Params.layout" "problem") 0 }}
 
   <!-- HERO -->
-  <div class="hero-section">
+  <div class="hero-section" data-section="all">
     <div class="section-inner">
-      <div class="section-title">Nggak Cuma Buat Website, Aku Bantu Muncul di Google!</div>
-      <div class="section-body">{{ .Site.Params.bio }}</div>
+      {{ if $hero }}
+      <h2 class="section-title">{{ $hero.Title }}</h2>
+      {{ if $hero.Params.image }}<img class="section-img" src="{{ $hero.Params.image }}" alt="{{ $hero.Title }}" />{{ end }}
+      <div class="section-body">{{ $hero.Content }}</div>
+      {{ end }}
     </div>
   </div>
 
   <!-- PROBLEM -->
-  <div class="section">
-    <div class="problem-inner">
-      <div class="section-title">Buat Website Aja Nggak Cukup!</div>
-      <div class="section-body">{{ .Site.Params.bio }}</div>
-      {{ range (where .Site.RegularPages "Section" "services") }}
+  <div class="section" data-section="all">
+    <div class="section-inner">
+      {{ if $problem }}
+      <h2 class="section-title">{{ $problem.Title }}</h2>
+      {{ if $problem.Params.image }}<img class="section-img" src="{{ $problem.Params.image }}" alt="{{ $problem.Title }}" />{{ end }}
+      <div class="section-body">{{ $problem.Content }}</div>
+      {{ end }}
+      {{ range where $services ".Params.layout" "sub" }}
       <div class="sub-heading">
-        <div class="sub-heading-title">{{ .Title }}</div>
+        <h3 class="sub-heading-title">{{ .Title }}</h3>
+        {{ if .Params.image }}<img class="section-img" src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
         <div class="sub-heading-body">{{ .Content }}</div>
       </div>
       {{ end }}
@@ -95,21 +114,27 @@
   </div>
 
   <!-- PROJECTS -->
-  <div class="section">
+  <div class="section" data-section="work">
     <div class="section-inner">
-      <div class="section-title">Bukti, Bukan Janji. Intip Hasil Kerjaku.</div>
-      <div class="section-body">{{ .Site.Params.bio }}</div>
+      <h2 class="section-title">Bukti, Bukan Janji. Intip Hasil Kerjaku.</h2>
+      <div class="section-body">{{ .Site.Params.projects_intro }}</div>
       <div class="see-all">Lihat Semua Projek</div>
       <div class="projects-scroll-wrap">
         <div class="projects-scroll">
           {{ range (where .Site.RegularPages "Section" "projects") }}
           <div class="project-card">
-            <div class="project-card-title">{{ .Title }}</div>
-            <div class="project-card-desc">{{ .Params.description }}</div>
-            <div class="project-card-link">Lihat Detail Projek</div>
+            <h3 class="project-card-title">{{ .Title }}</h3>
+            <p class="project-card-desc">{{ .Params.description }}</p>
+            <span class="project-card-link">Lihat Detail Projek</span>
             <div class="project-images">
-              <div class="project-thumb"></div>
-              <div class="project-thumb"></div>
+              {{ if .Params.images }}
+                {{ range .Params.images }}
+                <div class="project-thumb" style="background-image:url('{{ . }}');background-size:cover;background-position:center;"></div>
+                {{ end }}
+              {{ else }}
+                <div class="project-thumb"></div>
+                <div class="project-thumb"></div>
+              {{ end }}
             </div>
           </div>
           {{ end }}
@@ -119,18 +144,17 @@
   </div>
 
   <!-- PENDEKATAN -->
-  <div class="section">
+  <div class="section" data-section="all">
     <div class="section-inner">
-      <div class="section-title">Pendekatan & Solusi</div>
-      <div class="section-body">{{ .Site.Params.bio }}</div>
+      <h2 class="section-title">Pendekatan &amp; Solusi</h2>
       <div class="accordion-wrap">
         {{ range (where .Site.RegularPages "Section" "approach") }}
         <div class="acc-item">
-          <button class="acc-head">
+          <button class="acc-head" aria-expanded="false">
             <span class="acc-head-title">{{ .Title }}</span>
-            <div class="acc-chevron"></div>
+            <div class="acc-chevron" aria-hidden="true"></div>
           </button>
-          <div class="acc-body">
+          <div class="acc-body" role="region">
             <div class="acc-body-inner">{{ .Content }}</div>
           </div>
         </div>
@@ -140,9 +164,9 @@
   </div>
 
   <!-- TENTANG SAYA -->
-  <div class="section">
+  <div class="section" data-section="about">
     <div class="section-inner">
-      <div class="section-title">Tentang Saya</div>
+      <h2 class="section-title">Tentang Saya</h2>
       {{ range (where .Site.RegularPages "Section" "about") }}
       <div class="about-body">{{ .Content }}</div>
       {{ end }}
@@ -150,20 +174,19 @@
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="title-section">
-    <div class="section-title">Experience</div>
+  <div class="title-section" data-section="all">
+    <h2 class="section-title">Experience</h2>
   </div>
   {{ range (where .Site.RegularPages "Section" "experience") }}
-  <div class="exp-section">
+  <div class="exp-section" data-section="all">
     <div class="exp-inner">
       <div class="exp-header">
         <div class="exp-left">
-          <div class="exp-org">{{ .Title }}</div>
-          <div class="exp-role">{{ .Params.role }}</div>
+          <h3 class="exp-org">{{ .Title }}</h3>
+          <p class="exp-role">{{ .Params.role }}</p>
         </div>
         <div class="exp-right">
-          <div class="exp-date">{{ .Params.start }} -</div>
-          <div class="exp-date">{{ .Params.end }}</div>
+          <p class="exp-date">{{ .Params.start }} – {{ .Params.end }}</p>
         </div>
       </div>
       <div class="exp-body">{{ .Content }}</div>
@@ -172,20 +195,19 @@
   {{ end }}
 
   <!-- EDUCATION -->
-  <div class="title-section">
-    <div class="section-title">Education</div>
+  <div class="title-section" data-section="all">
+    <h2 class="section-title">Education</h2>
   </div>
   {{ range (where .Site.RegularPages "Section" "education") }}
-  <div class="exp-section">
+  <div class="exp-section" data-section="all">
     <div class="exp-inner">
       <div class="exp-header">
         <div class="exp-left">
-          <div class="exp-org">{{ .Title }}</div>
-          <div class="exp-role">{{ .Params.degree }}</div>
+          <h3 class="exp-org">{{ .Title }}</h3>
+          <p class="exp-role">{{ .Params.degree }}</p>
         </div>
         <div class="exp-right">
-          <div class="exp-date">{{ .Params.start }} -</div>
-          <div class="exp-date">{{ .Params.end }}</div>
+          <p class="exp-date">{{ .Params.start }} – {{ .Params.end }}</p>
         </div>
       </div>
       <div class="exp-body">{{ .Content }}</div>

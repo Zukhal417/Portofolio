@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Abouts on Asa Zukhal — Web Developer &amp; UI/UX Designer</title>
-		<link>https://asazukhal.me/about/</link>
+		<link>http://localhost:1313/about/</link>
 		<description>Recent content in Abouts on Asa Zukhal — Web Developer &amp; UI/UX Designer</description>
 		<generator>Hugo</generator>
 		<language>id</language>
@@ -10,12 +10,12 @@
 		
 		
 		
-			<atom:link href="https://asazukhal.me/about/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Tentang Saya</title>
-				<link>https://asazukhal.me/about/bio/</link>
+				<link>http://localhost:1313/about/bio/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://asazukhal.me/about/bio/</guid>
+				<guid>http://localhost:1313/about/bio/</guid>
 				<description>&lt;p&gt;Halo, aku Asa Zukhal! Banyak jasa website di luar sana yang cuma ngasih desain cantik tapi sepi pengunjung. Sebagai Web Developer &amp;amp; UI/UX Designer yang juga fokus di jasa SEO, aku bantu kamu bangun ekosistem digital yang nggak cuma enak dipakai user, tapi juga konsisten nangkring di halaman pertama pencarian.&lt;/p&gt;&#xA;&lt;p&gt;Kalau kamu nggak nemu proyek impian, ya bikin sendiri. Itu filosofi yang aku pegang. Aku percaya desain yang baik bukan cuma soal estetika — tapi tentang memecahkan masalah nyata dan menciptakan pengalaman yang bermakna.&lt;/p&gt;</description>
 			</item>
 	</channel>

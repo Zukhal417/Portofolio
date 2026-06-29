@@ -2,42 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://asazukhal.me/education/bachelor/</loc>
+    <loc>http://localhost:1313/education/bachelor/</loc>
   </url><url>
-    <loc>https://asazukhal.me/approach/riset-strategi/</loc>
+    <loc>http://localhost:1313/approach/riset-strategi/</loc>
   </url><url>
-    <loc>https://asazukhal.me/projects/fitness-tracker/</loc>
+    <loc>http://localhost:1313/projects/fitness-tracker/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/kelas-bahasa/</loc>
+    <loc>http://localhost:1313/experience/kelas-bahasa/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/digibos/</loc>
+    <loc>http://localhost:1313/services/hero/</loc>
   </url><url>
-    <loc>https://asazukhal.me/approach/desain-ui/</loc>
+    <loc>http://localhost:1313/services/problem/</loc>
   </url><url>
-    <loc>https://asazukhal.me/projects/fitness-tracker-2/</loc>
+    <loc>http://localhost:1313/experience/digibos/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/titik-nol/</loc>
+    <loc>http://localhost:1313/approach/desain-ui/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/skilvul/</loc>
+    <loc>http://localhost:1313/projects/fitness-tracker-2/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/sanggar-corp/</loc>
+    <loc>http://localhost:1313/experience/titik-nol/</loc>
   </url><url>
-    <loc>https://asazukhal.me/about/</loc>
+    <loc>http://localhost:1313/experience/skilvul/</loc>
   </url><url>
-    <loc>https://asazukhal.me/approach/</loc>
+    <loc>http://localhost:1313/experience/sanggar-corp/</loc>
   </url><url>
-    <loc>https://asazukhal.me/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>https://asazukhal.me/categories/</loc>
+    <loc>http://localhost:1313/approach/</loc>
   </url><url>
-    <loc>https://asazukhal.me/education/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://asazukhal.me/experience/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://asazukhal.me/projects/</loc>
+    <loc>http://localhost:1313/education/</loc>
   </url><url>
-    <loc>https://asazukhal.me/tags/</loc>
+    <loc>http://localhost:1313/experience/</loc>
   </url><url>
-    <loc>https://asazukhal.me/about/bio/</loc>
+    <loc>http://localhost:1313/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/bio/</loc>
   </url>
 </urlset>
